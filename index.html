@@ -1,106 +1,102 @@
- <!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="مدرسة صناع الغد للتكنولوجيا التطبيقية - تخصص Landscape - بالشراكة مع TMG طلعت مصطفى">
-<title>مدرسة صناع الغد | تخصص Landscape</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-/* ═══ THEMES ═══ */
-:root{
-  --bg1:#050e07;--bg2:#0a1a0d;--bg3:#0f2614;
-  --tx1:#fff;--tx2:rgba(255,255,255,.72);--tx3:rgba(255,255,255,.38);
-  --bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.13);
-  --ac1:#00a86b;--ac2:#00d084;--g3:#006847;
-  --gold:#c8a84b;--gold2:#f0c96e;
-  --glow:rgba(0,168,107,.35);--card:rgba(0,168,107,.04);
-}
-/* ... باقي تنسيقات الثيمات والأنيميشن كما هي في كودك الأصلي ... */
-[data-theme="ocean"]{--bg1:#020c18;--bg2:#041628;--bg3:#061e35;--ac1:#0ea5e9;--ac2:#38bdf8;--g3:#0369a1;--gold:#f59e0b;--gold2:#fbbf24;--glow:rgba(14,165,233,.35);--card:rgba(14,165,233,.04);}
-[data-theme="royal"]{--bg1:#0d0718;--bg2:#130a25;--bg3:#1a0d32;--ac1:#8b5cf6;--ac2:#a78bfa;--g3:#6d28d9;--gold:#f59e0b;--gold2:#fbbf24;--glow:rgba(139,92,246,.38);--card:rgba(139,92,246,.04);}
-[data-theme="fire"]{--bg1:#120500;--bg2:#1e0800;--bg3:#2a0c00;--ac1:#f97316;--ac2:#fb923c;--g3:#c2410c;--gold:#eab308;--gold2:#facc15;--glow:rgba(249,115,22,.38);--card:rgba(249,115,22,.04);}
-[data-theme="neon"]{--bg1:#000;--bg2:#050505;--bg3:#080808;--ac1:#39ff14;--ac2:#80ff50;--g3:#1a8c00;--gold:#ff00ff;--gold2:#ff66ff;--glow:rgba(57,255,20,.4);--card:rgba(57,255,20,.03);}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>مدرسة صناع الغد | تخصص Landscape</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* ═══ التنسيقات الأصلية الكاملة ═══ */
+        :root{
+          --bg1:#050e07;--bg2:#0a1a0d;--bg3:#0f2614;
+          --tx1:#fff;--tx2:rgba(255,255,255,.72);--tx3:rgba(255,255,255,.38);
+          --bd:rgba(255,255,255,.07);--bd2:rgba(255,255,255,.13);
+          --ac1:#00a86b;--ac2:#00d084;--g3:#006847;
+          --gold:#c8a84b;--gold2:#f0c96e;
+          --glow:rgba(0,168,107,.35);--card:rgba(0,168,107,.04);
+        }
+        body{font-family:"Cairo",sans-serif;background:var(--bg1);color:var(--tx1);margin:0;overflow-x:hidden;}
+        section{padding:80px 5%; position:relative;}
+        .si{max-width:1200px;margin:0 auto;}
 
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:"Cairo",sans-serif;background:var(--bg1);color:var(--tx1);overflow-x:hidden;transition:background .5s,color .5s;}
-
-/* تنسيق رسالة الحالة للنموذج */
-#my-form-status { margin-top: 15px; font-size: 14px; text-align: center; font-weight: bold; }
-</style>
+        /* تنسيق نموذج التقديم ليتناسب مع موقعك */
+        .admform-container{
+            background: var(--bg2);
+            border: 1px solid var(--bd2);
+            border-radius: 24px;
+            padding: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .fi{width:100%; padding:15px; margin-bottom:20px; background:var(--bg3); border:1px solid var(--bd); border-radius:12px; color:#fff; font-family:"Cairo";}
+        .fsub{width:100%; padding:18px; background:linear-gradient(135deg,var(--g3),var(--ac1)); border:none; border-radius:15px; color:#fff; font-weight:800; cursor:pointer; font-size:1.1rem; transition:0.3s;}
+        .fsub:hover{transform:translateY(-3px); box-shadow:0 10px 25px var(--glow);}
+        #my-form-status{margin-top:20px; text-align:center; font-weight:bold;}
+    </style>
 </head>
 <body>
 
-<section id="admission">
-    <div class="si">
-        <div class="admg">
-            <div class="adm-info">
-                <span class="sbadge">طلب انضمام</span>
-                <h2 class="stitle">سجل بياناتك للالتحاق بالمدرسة</h2>
-                <p class="sdesc">سيتم مراجعة طلبك والتواصل معك عبر الواتساب أو البريد الإلكتروني.</p>
-            </div>
+    <section id="hero" style="text-align:center; padding:120px 5%;">
+        <div class="si">
+            <h1 style="font-size:3.5rem; font-weight:900; margin-bottom:10px;">مدرسة <span style="color:var(--ac2);">صناع الغد</span></h1>
+            <p style="font-size:1.4rem; color:var(--tx2);">تخصص تنسيق المواقع (Landscape) - بالشراكة مع TMG</p>
+        </div>
+    </section>
 
+    <section id="admission">
+        <div class="si">
+            <div style="text-align:center; margin-bottom:40px;">
+                <h2 style="font-size:2.2rem;">انضم إلينا الآن</h2>
+                <p style="color:var(--tx2);">سجل بياناتك وسنقوم بالتواصل معك لإتمام إجراءات القبول</p>
+            </div>
+            
             <div class="admform-container">
-                <form id="my-form" action="https://formspree.io/f/mgorjbje" method="POST" class="admform" style="background:var(--card); padding:30px; border-radius:22px; border:1px solid var(--bd2);">
-                    <div class="fg2" style="margin-bottom:15px;">
-                        <label class="fl" style="display:block; font-size:12px; margin-bottom:5px;">الاسم رباعي</label>
-                        <input type="text" name="name" class="fi" style="width:100%; padding:12px; border-radius:10px; background:var(--bg3); border:1px solid var(--bd); color:#fff;" required>
-                    </div>
-                    <div class="fg2" style="margin-bottom:15px;">
-                        <label class="fl" style="display:block; font-size:12px; margin-bottom:5px;">البريد الإلكتروني</label>
-                        <input type="email" name="email" class="fi" style="width:100%; padding:12px; border-radius:10px; background:var(--bg3); border:1px solid var(--bd); color:#fff;" required>
-                    </div>
-                    <div class="fg2" style="margin-bottom:15px;">
-                        <label class="fl" style="display:block; font-size:12px; margin-bottom:5px;">رقم الموبايل (واتساب)</label>
-                        <input type="tel" name="phone" class="fi" style="width:100%; padding:12px; border-radius:10px; background:var(--bg3); border:1px solid var(--bd); color:#fff;" required>
-                    </div>
-                    <div class="fg2" style="margin-bottom:15px;">
-                        <label class="fl" style="display:block; font-size:12px; margin-bottom:5px;">المجموع</label>
-                        <input type="number" name="grade" class="fi" style="width:100%; padding:12px; border-radius:10px; background:var(--bg3); border:1px solid var(--bd); color:#fff;" required>
-                    </div>
-                    <button type="submit" id="my-form-button" style="width:100%; padding:14px; border-radius:12px; border:none; background:linear-gradient(135deg, var(--g3), var(--ac1)); color:#fff; font-weight:bold; cursor:pointer;">إرسال الطلب</button>
+                <form id="my-form" action="https://formspree.io/f/mgorjbje" method="POST" class="admform">
+                    <input type="text" name="name" class="fi" required placeholder="الاسم رباعي">
+                    <input type="email" name="email" class="fi" required placeholder="البريد الإلكتروني">
+                    <input type="tel" name="phone" class="fi" required placeholder="رقم الموبايل (واتساب)">
+                    <input type="number" name="grade" class="fi" required placeholder="مجموع الإعدادية">
+                    
+                    <button type="submit" id="my-form-button" class="fsub">إرسال طلب الالتحاق</button>
                     <p id="my-form-status"></p>
                 </form>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<script>
-  var form = document.getElementById("my-form");
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    var button = document.getElementById("my-form-button");
-    
-    button.disabled = true;
-    button.innerHTML = "جاري الإرسال...";
-
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        status.innerHTML = "✅ تم الإرسال بنجاح! سنتواصل معك قريباً.";
-        status.style.color = "var(--ac2)";
-        form.reset();
-      } else {
-        status.innerHTML = "❌ حدث خطأ، تأكد من صحة البيانات.";
-        status.style.color = "red";
-      }
-      button.disabled = false;
-      button.innerHTML = "إرسال الطلب";
-    }).catch(error => {
-      status.innerHTML = "❌ خطأ في الاتصال بالإنترنت.";
-      button.disabled = false;
-      button.innerHTML = "إرسال الطلب";
-    });
-  }
-  form.addEventListener("submit", handleSubmit);
-</script>
-
+    <script>
+        var form = document.getElementById("my-form");
+        async function handleSubmit(event) {
+          event.preventDefault();
+          var status = document.getElementById("my-form-status");
+          var data = new FormData(event.target);
+          var button = document.getElementById("my-form-button");
+          
+          button.disabled = true;
+          button.innerHTML = "جاري الإرسال...";
+          
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {'Accept': 'application/json'}
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "✅ تم الإرسال بنجاح! سنتواصل معك قريباً.";
+              status.style.color = "#00d084";
+              form.reset();
+            } else {
+              status.innerHTML = "❌ حدث خطأ، يرجى المحاولة مرة أخرى.";
+              status.style.color = "#ff4d4d";
+            }
+            button.disabled = false;
+            button.innerHTML = "إرسال طلب الالتحاق";
+          }).catch(error => {
+            status.innerHTML = "❌ عذراً، توجد مشكلة في الاتصال.";
+            button.disabled = false;
+          });
+        }
+        form.addEventListener("submit", handleSubmit);
+    </script>
 </body>
 </html>
